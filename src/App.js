@@ -10,50 +10,50 @@ import './styles/style.css'
 const App = () => {
 
   let initTodo;
-  if (localStorage.getItem("todos") === null) {
+  if (localStorage.getItem("tasks") === null) {
     initTodo = [];
   } else {
-    initTodo = JSON.parse(localStorage.getItem("todos"));
+    initTodo = JSON.parse(localStorage.getItem("tasks"));
   }
 
 
-  const onDelete = (todo) => {
-    setTodos(todos.filter((e) => {
-      return e !== todo;
+  const onDelete = (task) => {
+    setTasks(tasks.filter((e) => {
+      return e !== task;
     }));
-    console.log("deleted", todos)
-    localStorage.setItem("todos", JSON.stringify(todos));
+    console.log("deleted", tasks)
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
-  const addTodo = (task) => {
+  const addTask = (task) => {
     let sno;
-    if (todos.length === 0) {
+    if (tasks.length === 0) {
       sno = 0;
     }
     else {
-      sno = todos[todos.length - 1].sno + 1;
+      sno = tasks[tasks.length - 1].sno + 1;
     }
-    const myTodo = {
+    const myTask = {
       sno: sno,
       task: task,
     }
-    setTodos([...todos, myTodo]);
-    console.log(myTodo);
+    setTasks([...tasks, myTask]);
   }
 
-  const [todos, setTodos] = useState(initTodo);
+  const [tasks, setTasks] = useState(initTodo);
+
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos])
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks])
 
   return (
     <BrowserRouter>
       <>
         <Header />
         <Routes>
-          <Route path="/" element={<TodoList todos={todos} onDelete={onDelete} />} />
+          <Route path="/" element={<TodoList tasks={tasks} onDelete={onDelete} />} />
           <Route path='/about' element={<About />} />
-          <Route path='/create' element={<Create addTodo={addTodo} />} />
+          <Route path='/create' element={<Create addTask={addTask} />} />
         </Routes>
         <Footer />
       </>

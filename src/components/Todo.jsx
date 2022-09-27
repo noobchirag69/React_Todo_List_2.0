@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/todo.css'
 
-export const Todo = ({todo, onDelete}) => {
+export const Todo = ({task, onDelete}) => {
   return (
     <>
       <div className="wrapper">
-        <h3>{todo.task}</h3>
-        <button onClick={() => { onDelete(todo) }}>Delete</button>
+        <h3>{task.task}</h3>
+        <button onClick={() => { onDelete(task) }}>Delete</button>
       </div>
     </>
   )

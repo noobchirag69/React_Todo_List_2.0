@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/create.css'
 
-export const Create = ({ addTodo }) => {
+export const Create = ({ addTask }) => {
   const [task, setTask] = useState("");
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ export const Create = ({ addTodo }) => {
       alert("The task can't be blank!");
     }
     else {
-      addTodo(task);
+      addTask(task);
       setTask("");
       navigate('/');
     }
