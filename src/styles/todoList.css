@@ -1,0 +1,12 @@
+.container {
+    border: 1px solid #000;
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+}
+
+.container > h1 {
+    text-align: center;
+}

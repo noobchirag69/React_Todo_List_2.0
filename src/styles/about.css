@@ -1,0 +1,17 @@
+.about-box {
+    border: 1px solid #000;
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+}
+
+.about-box > h1, .about-box > hr {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-box > p {
+    text-align: center;
+}
