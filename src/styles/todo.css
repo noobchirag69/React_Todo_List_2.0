@@ -1,0 +1,25 @@
+.wrapper {
+    background-color: rgb(64, 64, 64);
+    margin: 10px auto;
+    padding: 20px;
+    width: 500px;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper > h3 {
+    margin-bottom : 20px;
+}
+
+.wrapper > button {
+    width: 100px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 350px;
+    }
+}

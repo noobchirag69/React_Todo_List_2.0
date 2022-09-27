@@ -5,7 +5,7 @@ import '../styles/header.css'
 export const Header = () => {
 
   const headerStyle = {
-    margin: '0 50px', 
+    margin: '0 30px', 
     fontWeight: 'bold', 
     fontSize: '20px', 
     textDecoration: 'none',

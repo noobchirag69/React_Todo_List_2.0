@@ -1,11 +1,10 @@
 .container {
-    margin: 50px auto;
-    width: 500px;
-    padding: 50px;
-    background-color: rgb(64, 64, 64);
-    color: #fff;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container > h1 {
-    text-align: center;
+.container > h3 {
+    margin-bottom: 20px;
 }
